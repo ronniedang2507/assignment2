@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<script src="js/script.js"></script>
 
-	<title>Melbourne Explorer</title>
+	<title>Register - Melbourne Explorer</title>
 </head>
 
 <body>
@@ -16,16 +16,57 @@
 
         <nav>
             <ul>
-                <li><a href="index.html" class="nav-home">Home</a></li>
-                <li><a href="restaurants.html" class="nav-restaurants">Restaurants</a></li>
-                <li><a href="recommend.html" class="nav-recommend">Recommendations</a></li>
-                <li><a href="register.html" class="nav-register">Register</a></li>
-                <li><a href="reservation.html" class="nav-reservation">Reservation</a></li>
+                <li><a href="index.html" id="nav-home">Home</a></li>
+                <li><a href="restuarants.html" id="nav-restaurants">Restaurants</a></li>
+                <li><a href="recommend.html" id="nav-recommend">Recommendations</a></li>
+                <li><a href="register.html" id="nav-register">Register</a></li>
+                <li><a href="reservation.html" id="nav-reservation">Reservation</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
+        <form id="regform" method="post"
+		action="http://mercury.swin.edu.au/it000000/formtest.php">
+
+		<fieldset>
+			<legend>Account Information</legend>
+
+			<div class="textinput">
+				<label for="sid">User ID</label>
+				<input id="sid" type="text" name="sid" />
+			</div>
+
+			<div class="textinput">
+				<label for="pwd1">Password</label>
+				<input id="pwd1" type="password" name="pwd1" />
+			</div>
+
+			<div class="textinput">
+				<label for="pwd2">Retype Password</label>
+				<input id="pwd2" type="password" name="pwd2" />
+			</div>
+            
+            <div class="textinput">
+                <label for="uname">Full Name</label>
+                <input id="uname" type="text" name="uname" />
+            </div>
+		</fieldset>
+
+		<div class="radioinput"> 
+            <span class="radiolabel">Gender</span>
+
+				<input id="genm" type="radio" name="gender" value="M" />
+				<label for="genm">Male</label>
+
+				<input id="genf" type="radio" name="gender" value="F" />
+				<label for="genf">Female</label>
+        </div>
+
+		<div class="buttoninput">
+			<input type="submit" value="Register Here" />
+		</div>
+	</form>
 
     </main>
 
