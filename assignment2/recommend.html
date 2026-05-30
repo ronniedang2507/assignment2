@@ -26,6 +26,38 @@
     </header>
 
     <main>
+        <form id="reccform">
+            <label for="cuisine">Choose a Cuisine:</label><br>
+            <select id="cuisine">
+            <option value="">-- Select --</option>
+            <option value="thai">Thai</option>
+            <option value="asian">Asian</option>
+            <option value="burgers">Burgers</option>
+            <option value="italian">Italian</option>
+        </select>
+        <br><br>
+
+        <label for="area">Location Preference:</label><br>
+        <select id="area">
+            <option value="">-- Select --</option>
+            <option value="melbournecbd">Melbourne CBD</option>
+            <option value="richmond">Richmond</option>
+            <option value="none">No preference</option>
+        </select><br><br>
+        
+        <label for="price">Price Range:</label><br>
+        <select id="price">
+            <option value="">-- Select --</option>
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+        </select><br><br>
+
+        <input type="button" value="Get Recommendation" onclick="recommend()">
+        </form>
+
+        <h3> Your Recommendations:</h3>
+        <p id="result"></p>
 
     </main>
 
@@ -34,3 +66,4 @@
     </footer>
 </body>
 </html>
+

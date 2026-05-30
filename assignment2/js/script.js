@@ -6,6 +6,7 @@ function validate() {
 	var genm = document.getElementById("genm").checked;
 	var genf = document.getElementById("genf").checked;
 
+
 	var errMsg = "";								/* create variable to store the error message */
 	var result = true;								/* assumes no errors */
 	var pattern = /^[a-zA-Z ]+$/;					/* regular expression for letters and spaces only */
@@ -67,3 +68,42 @@ function init () {
 
 /* execute function init() once the window is loaded*/
 window.onload = init;
+
+
+function recommend() {
+    var cuisine = document.getElementById("cuisine").value;
+    var price = document.getElementById("area").value;
+    var area = document.getElementById("price").value;
+
+    var result = "";
+
+    if (cuisine === "" || price === "" || area === "") {
+        result = "Choose all options to get recommendation.";
+        document.getElementById("result").innerText = result;
+        return;
+    }
+
+    // Thai
+    if (cuisine === "thai") {
+        result = " Recommendation is Dodee Paidang.";
+    }
+
+
+    // Asian
+    else if (cuisine === "asian") {
+        result = "Recommendation is Dodee Paidang";
+    }
+
+    // Burgers
+    else if (cuisine === "burgers") {
+        result = "Recommendation is Grill'd, Mcdonald's or Hungry Jack's.";
+    }
+
+    // Italian
+    else if (cuisine === "italian") {
+        result = "Recommendation is Sofia on Camberwell road.";
+    }
+
+
+    document.getElementById("result").innerText = result;
+}
