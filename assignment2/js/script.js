@@ -56,14 +56,15 @@ function validate() {
 
 
 
-
 /* link HTML elements to corresponding event function */
 function init () {
 	/* assign the <form> element to variable regForm */
 	var regForm = document.getElementById("regform");
+    if (regForm) regForm.onsubmit = validate;
 
 	/* link function validate() to the onsubmit event of the form */
-	regForm.onsubmit = validate;
+	var resForm = document.getElementById("resform");
+    if (resForm) resForm.onsubmit = reserve;
 }
 
 /* execute function init() once the window is loaded*/
@@ -107,3 +108,40 @@ function recommend() {
 
     document.getElementById("result").innerText = result;
 }
+
+
+
+function reserve() {
+    var name = document.getElementById("resname").value;
+    var date = document.getElementById("resdate").value;
+    var time = document.getElementById("restime").value;
+    var guests = document.getElementById("resguest").value;
+
+    var errMsg = "";
+    var result = true;
+    var pattern = /^[a-zA-Z ]+$/;
+
+    if (name == "") {
+        errMsg += "Name cannot be empty.\n";
+    }
+    if (!name.match(pattern)) {
+        errMsg += "Name can only have letters and spaces.\n";
+    }
+    if (date == "") {
+        errMsg += "Must select a date.\n";
+    }
+    if (time == "") {
+        errMsg += "Must select a time.\n";
+    }
+    if (guests == "" || guests <= 0) {
+        errMsg += "Must have 1 guest or more..\n";
+    }
+
+    if (errMsg != "") {
+        alert(errMsg);
+        result = false;
+    }
+
+    return result;
+}
+

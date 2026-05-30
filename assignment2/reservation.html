@@ -26,6 +26,36 @@
     </header>
 
     <main>
+        <form id="resform" method="post" action="http://mercury.swin.edu.au/it000000/formtest.php">
+
+		<fieldset>
+			<legend>Reservations</legend>
+
+			<div class="textinput">
+				<label for="resname">Full Name: </label>
+				<input id="resname" type="text" name="resname" />
+			</div>
+
+			<div class="textinput">
+				<label for="resdate">Date: </label>
+				<input id="resdate" type="password" name="resdate" />
+			</div>
+
+			<div class="textinput">
+				<label for="restime">Reservation Time: </label>
+				<input id="restime" type="password" name="restime" />
+			</div>
+            
+            <div class="textinput">
+                <label for="resguest">Number of Guests: </label>
+                <input id="resguest" type="text" name="resguest" />
+            </div>
+		</fieldset>
+
+		<div class="buttoninput">
+			<input type="submit" value="Book Here" />
+		</div>
+	</form>
 
     </main>
 
