@@ -37,19 +37,47 @@
 			</div>
 
 			<div class="textinput">
-				<label for="resdate">Date: </label>
-				<input id="resdate" type="password" name="resdate" />
+				<label for="resemail">Email Address: </label>
+				<input id="resemail" type="email" name="resemail" />
 			</div>
 
 			<div class="textinput">
-				<label for="restime">Reservation Time: </label>
-				<input id="restime" type="password" name="restime" />
+				<label for="resphone">Phone Number: </label>
+				<input id="resphone" type="text" name="resphone" />
 			</div>
+
+			<div class="textinput">
+        		<label for="restaurant">Restaurant:</label>
+        		<select id="restaurant" name="restaurant">
+            		<option value="">-- Select --</option>
+            		<option value="grill'd">Grill'd</option>
+            		<option value="dodeepaidang">Dodee Paidang</option>
+            		<option value="sofiacamberwell">Sofia Camberwell</option>
+            		<option value="mcdonald's">McDonald's</option>
+            		<option value="hungryjack's">Hungry Jack's</option>
+            		<option value="kfc">KFC</option>
+        		</select>
+    		</div>
             
             <div class="textinput">
                 <label for="resguest">Number of Guests: </label>
-                <input id="resguest" type="text" name="resguest" />
+                <input id="resguest" type="number" name="resguest" min="1" />
             </div>
+
+			<div class="textinput">
+        		<label for="deposit">Deposit Amount:</label>
+        		<input id="deposit" type="text" name="deposit">
+    		</div>
+
+			<div class="textinput">
+        		<label for="method">Deposit Method:</label>
+        		<select id="method" name="method">
+            		<option value="">-- Select --</option>
+            		<option value="voucher">Voucher</option>
+            		<option value="online">Online Payment</option>
+        		</select>
+    		</div>
+
 		</fieldset>
 
 		<div class="buttoninput">

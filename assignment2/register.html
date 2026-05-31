@@ -33,8 +33,18 @@
 			<legend>Account Information</legend>
 
 			<div class="textinput">
-				<label for="sid">User ID</label>
+				<label for="sid">Username: </label>
 				<input id="sid" type="text" name="sid" />
+			</div>
+
+			<div class="textinput">
+    			<label for="email">Email Address: </label>
+    			<input id="email" type="email" name="email" />
+			</div>
+
+			<div class="textinput">
+    			<label for="phone">Phone Number: </label>
+    			<input id="phone" type="text" name="phone" />
 			</div>
 
 			<div class="textinput">
@@ -46,22 +56,39 @@
 				<label for="pwd2">Retype Password</label>
 				<input id="pwd2" type="password" name="pwd2" />
 			</div>
-            
-            <div class="textinput">
-                <label for="uname">Full Name</label>
-                <input id="uname" type="text" name="uname" />
-            </div>
-		</fieldset>
 
-		<div class="radioinput"> 
-            <span class="radiolabel">Gender</span>
+			<div class="radioinput"> 
+            	<span class="radiolabel">Gender</span>
 
 				<input id="genm" type="radio" name="gender" value="M" />
 				<label for="genm">Male</label>
 
 				<input id="genf" type="radio" name="gender" value="F" />
 				<label for="genf">Female</label>
-        </div>
+        	</div>
+            
+            <div class="textinput">
+    		<label for="dietpref">Dietary Preference</label>
+    		<select id="dietpref" name="dietpref">
+        		<option value="">-- Select --</option>
+        		<option value="vegan">Vegan</option>
+        		<option value="halal">Halal</option>
+        		<option value="none">None</option>
+    		</select>
+			</div>
+
+			<div class="textinput">
+    		<label for="country">Country / Region</label>
+    		<select id="country" name="country">
+        		<option value="">-- Select --</option>
+        		<option value="australia">Australia</option>
+        		<option value="newzealand">New Zealand</option>
+        		<option value="asia">A country in Asia</option>
+        		<option value="europe">A country in Europe</option>
+        		<option value="other">Other</option>
+    		</select>
+			</div>
+		</fieldset>
 
 		<div class="buttoninput">
 			<input type="submit" value="Register Here" />
