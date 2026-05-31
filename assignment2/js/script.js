@@ -72,41 +72,51 @@ window.onload = init;
 
 
 function recommend() {
-    var cuisine = document.getElementById("cuisine").value;
-    var price = document.getElementById("area").value;
-    var area = document.getElementById("price").value;
+    var diet = document.getElementById("diet").value;
+    var price = document.getElementById("purpose").value;
+    var purpose = document.getElementById("price").value;
 
     var result = "";
 
-    if (cuisine === "" || price === "" || area === "") {
+    if (diet === "" || price === "" || purpose === "") {
         result = "Choose all options to get recommendation.";
-        document.getElementById("result").innerText = result;
+        document.getElementById("resultrec").innerText = result;
         return;
     }
 
-    // Thai
-    if (cuisine === "thai") {
-        result = " Recommendation is Dodee Paidang.";
+    // vegan
+    if (diet === "vegan") {
+        if (price === "low") 
+            {
+                result = "Recommendation: Grill'd has vegan options";
+            }
+        else if (price === "medium") result = "Recommendation: Grill'd ";
+        else result = "Recommendation: Grill'd";
     }
 
 
-    // Asian
-    else if (cuisine === "asian") {
-        result = "Recommendation is Dodee Paidang";
+    // Halal
+    else if (diet === "halal") {
+        if (purpose === "family") 
+            {
+                result = "Recommendation: Dodee Paidang";
+            }
+        else if (purpose === "date") result = "Recommendation: Sofia Camberwell";
+        else result = "Recommendation: Dodee Paidang";
     }
 
     // Burgers
-    else if (cuisine === "burgers") {
-        result = "Recommendation is Grill'd, Mcdonald's or Hungry Jack's.";
+    else if (diet === "none") {
+        if (price === "low") 
+            {
+                result = "Recommendation: Mcdonald's or Hungry Jack's or KFC";
+            }
+        else if (price === "medium") result = "Recommendation: Grill'd ";
+        else result = "Recommendation: Grill'd";
     }
 
-    // Italian
-    else if (cuisine === "italian") {
-        result = "Recommendation is Sofia on Camberwell road.";
-    }
 
-
-    document.getElementById("result").innerText = result;
+    document.getElementById("resultrec").innerText = result;
 }
 
 
